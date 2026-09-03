@@ -1,0 +1,877 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: django-unfold 0.104.1\n"
+"Report-Msgid-Bugs-To: https://github.com/unfoldadmin/django-unfold/issues\n"
+"POT-Creation-Date: 2026-09-03 00:00+0000\n"
+"PO-Revision-Date: 2026-09-03 00:00+0000\n"
+"Last-Translator: DaynaCode <daynacode@example.com>\n"
+"Language-Team: English <en@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: contrib/inlines/admin.py contrib/inlines/admin.py
+msgid "%(class_name)s %(instance)s"
+msgstr ""
+
+#: templates/admin/object_history.html templates/admin/object_history.html
+msgid "Action"
+msgstr ""
+
+#: templates/unfold/helpers/app_list_default.html
+#: templates/unfold_crispy/layout/table_inline_formset.html
+#: templates/unfold/helpers/app_list_default.html
+#: templates/unfold_crispy/layout/table_inline_formset.html
+msgid "Add"
+msgstr ""
+
+#: contrib/forms/templates/unfold/forms/array.html
+#: contrib/forms/templates/unfold/forms/array.html
+msgid "Add new item"
+msgstr ""
+
+#: templates/unfold_crispy/layout/table_inline_formset.html
+#: templates/unfold_crispy/layout/table_inline_formset.html
+msgid "Add row"
+msgstr ""
+
+#: contrib/filters/admin/choice_filters.py
+#: contrib/filters/admin/choice_filters.py
+#: contrib/filters/admin/choice_filters.py
+#: contrib/filters/admin/dropdown_filters.py contrib/filters/admin/mixins.py
+msgid "All"
+msgstr ""
+
+#: templates/unfold/helpers/app_list_all.html
+#: templates/unfold/helpers/app_list_all.html
+msgid "All applications"
+msgstr ""
+
+#: contrib/inlines/admin.py contrib/inlines/admin.py
+msgid "and"
+msgstr ""
+
+#: templates/unfold/helpers/change_list_filter_actions.html
+#: templates/unfold/helpers/change_list_filter_actions.html
+msgid "Apply Filters"
+msgstr ""
+
+#: templates/unfold/helpers/shortcuts.html
+#: templates/unfold/helpers/shortcuts.html
+msgid "Available shortcuts"
+msgstr ""
+
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+msgid "Bold"
+msgstr ""
+
+#: contrib/filters/admin/choice_filters.py
+#: contrib/filters/admin/choice_filters.py
+#: contrib/filters/admin/choice_filters.py
+#: contrib/filters/admin/choice_filters.py
+#: contrib/filters/admin/dropdown_filters.py
+msgid "By %(filter_title)s"
+msgstr ""
+
+#: templates/unfold/helpers/dialog.html templates/unfold/helpers/dialog.html
+msgid "Cancel"
+msgstr ""
+
+#: templates/unfold/helpers/app_list_default.html
+#: templates/unfold/helpers/edit_inline/inline_links.html
+#: templates/unfold/helpers/app_list_default.html
+#: templates/unfold/helpers/edit_inline/inline_links.html
+msgid "Change"
+msgstr ""
+
+#: contrib/simple_history/templates/simple_history/submit_line.html
+#: contrib/simple_history/templates/simple_history/submit_line.html
+msgid "Change History"
+msgstr ""
+
+#: templates/admin/auth/user/change_password.html
+#: templates/registration/password_change_form.html
+#: templates/unfold/helpers/account_links.html
+#: templates/admin/auth/user/change_password.html
+#: templates/registration/password_change_form.html
+msgid "Change password"
+msgstr ""
+
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+msgid "Change reason"
+msgstr ""
+
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+msgid "Changed by"
+msgstr ""
+
+#: templates/unfold/helpers/shortcuts.html
+#: templates/unfold/helpers/shortcuts.html
+msgid "Changelist shortcuts"
+msgstr ""
+
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+msgid "Changes"
+msgstr ""
+
+#: templates/unfold/widgets/clearable_file_input.html
+#: templates/unfold/widgets/clearable_file_input.html
+#: templates/unfold/widgets/clearable_file_input_small.html
+#: templates/unfold/widgets/clearable_file_input_small.html
+#: templates/unfold/widgets/clearable_file_input.html
+msgid "Choose file to upload"
+msgstr ""
+
+#: templates/unfold/helpers/command_help.html
+#: templates/unfold/helpers/shortcuts.html
+#: templates/unfold/helpers/command_help.html
+#: templates/unfold/helpers/shortcuts.html
+msgid "Clear"
+msgstr ""
+
+#: templates/unfold/helpers/change_list_filter_actions.html
+#: templates/unfold/helpers/change_list_filter_actions.html
+msgid "Clear all filters"
+msgstr ""
+
+#: templates/admin/actions.html templates/admin/dataset_actions.html
+#: templates/admin/actions.html templates/admin/dataset_actions.html
+msgid "Clear selection"
+msgstr ""
+
+#: templates/admin/actions.html templates/admin/dataset_actions.html
+#: templates/admin/actions.html templates/admin/dataset_actions.html
+msgid "Click here to select the objects across all pages"
+msgstr ""
+
+#: templates/unfold/helpers/edit_inline/inline_delete_undo.html
+#: templates/unfold/helpers/edit_inline/inline_delete_undo.html
+msgid "Click to cancel"
+msgstr ""
+
+#: templates/unfold/helpers/field_readonly_value_file.html
+#: templates/unfold/helpers/field_readonly_value_file.html
+msgid "Click to download"
+msgstr ""
+
+#: contrib/simple_history/templates/simple_history/submit_line.html
+#: templates/admin/submit_line.html
+#: contrib/simple_history/templates/simple_history/submit_line.html
+#: templates/admin/submit_line.html
+msgid "Close"
+msgstr ""
+
+#: contrib/constance/templates/admin/constance/includes/results_list.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/constance/templates/admin/constance/includes/results_list.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+msgid "Code"
+msgstr ""
+
+#: contrib/constance/templates/admin/constance/includes/results_list.html
+#: contrib/constance/templates/admin/constance/includes/results_list.html
+msgid "Collapse"
+msgstr ""
+
+#: templates/unfold/helpers/shortcuts.html
+#: templates/unfold/helpers/shortcuts.html
+msgid "Command tool shortcuts"
+msgstr ""
+
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+msgid "Comment"
+msgstr ""
+
+#: contrib/import_export/templates/admin/import_export/import_confirm.html
+#: contrib/import_export/templates/admin/import_export/import_confirm.html
+msgid "Confirm import"
+msgstr ""
+
+#: templates/unfold/helpers/shortcuts.html
+#: templates/unfold/helpers/shortcuts.html
+msgid "Create new record"
+msgstr ""
+
+#: contrib/constance/templates/admin/constance/includes/results_list.html
+#: contrib/constance/templates/admin/constance/includes/results_list.html
+msgid "Current file"
+msgstr ""
+
+#: templates/unfold/helpers/theme_switch.html
+#: templates/unfold/helpers/theme_switch_dropdown.html
+#: templates/unfold/helpers/theme_switch.html
+#: templates/unfold/helpers/theme_switch_dropdown.html
+msgid "Dark"
+msgstr ""
+
+#: mixins/dataset_model_admin.py
+msgid "Dataset not found. No action performed."
+msgstr ""
+
+#: widgets.py widgets.py
+msgid "Date"
+msgstr ""
+
+#: contrib/filters/forms.py contrib/filters/forms.py
+msgid "Date from"
+msgstr ""
+
+#: contrib/filters/forms.py contrib/filters/forms.py
+msgid "Date to"
+msgstr ""
+
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+#: templates/admin/object_history.html
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+#: templates/admin/object_history.html
+msgid "Date/time"
+msgstr ""
+
+#: contrib/constance/templates/admin/constance/includes/results_list.html
+#: contrib/constance/templates/admin/constance/includes/results_list.html
+msgid "Default"
+msgstr ""
+
+#: templates/admin/submit_line.html templates/admin/submit_line.html
+msgid "Delete"
+msgstr ""
+
+#: templates/unfold/helpers/site_branding.html
+#: templates/unfold/helpers/site_branding.html
+#: templates/unfold/helpers/site_branding.html
+#: templates/unfold/helpers/site_branding.html
+msgid "Django administration"
+msgstr ""
+
+#: templates/admin/app_index.html templates/admin/base_site.html
+#: templates/admin/index.html templates/admin/login.html
+#: templates/unfold/layouts/base.html
+msgid "Django site admin"
+msgstr ""
+
+#: contrib/guardian/templates/unfold/guardian/group_form.html
+#: contrib/guardian/templates/unfold/guardian/user_form.html
+#: contrib/guardian/templates/unfold/guardian/group_form.html
+#: contrib/guardian/templates/unfold/guardian/user_form.html
+msgid "Edit"
+msgstr ""
+
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+msgid "Enter an URL"
+msgstr ""
+
+#: contrib/import_export/templates/admin/import_export/change_form.html
+#: contrib/import_export/templates/admin/import_export/change_form.html
+msgid "Export"
+msgstr ""
+
+#: templates/unfold/helpers/boolean.html templates/unfold/helpers/boolean.html
+msgid "False"
+msgstr ""
+
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+msgid "Field"
+msgstr ""
+
+#: templates/unfold/helpers/change_list_filter_button.html
+#: templates/unfold/helpers/change_list_filter_button.html
+msgid "Filters"
+msgstr ""
+
+#: templates/admin/login.html templates/admin/login.html
+msgid "Forgotten your password or username?"
+msgstr ""
+
+#: contrib/filters/forms.py contrib/filters/forms.py contrib/filters/forms.py
+#: contrib/filters/forms.py
+msgid "From"
+msgstr ""
+
+#: templates/unfold/helpers/tab_items.html
+#: templates/unfold/helpers/tab_items.html
+msgid "General"
+msgstr ""
+
+#: templates/unfold/helpers/shortcuts.html
+#: templates/unfold/helpers/shortcuts.html
+msgid "Global shortcuts"
+msgstr ""
+
+#: templates/unfold/helpers/header_back_button.html
+#: templates/unfold/helpers/header_back_button.html
+#: templates/unfold/helpers/header_back_button.html
+#: templates/unfold/helpers/header_back_button.html
+msgid "Go back"
+msgstr ""
+
+#: contrib/guardian/templates/unfold/guardian/group_form.html
+#: contrib/guardian/templates/unfold/guardian/group_form.html
+msgid "Group"
+msgstr ""
+
+#: contrib/guardian/templates/unfold/guardian/group_form.html
+#: contrib/guardian/templates/unfold/guardian/group_form.html
+msgid "Group permissions"
+msgstr ""
+
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+msgid "Heading"
+msgstr ""
+
+#: templates/unfold/helpers/change_list_filter_actions.html
+#: templates/unfold/helpers/change_list_filter_actions.html
+msgid "Hide counts"
+msgstr ""
+
+#: contrib/hijack/templates/hijack/notification.html
+#: contrib/hijack/templates/hijack/notification.html
+msgid "hide warning"
+msgstr ""
+
+#: templates/unfold/helpers/site_icon.html
+#: templates/unfold/helpers/site_icon.html
+#: templates/unfold/helpers/site_icon.html
+#: templates/unfold/helpers/site_logo.html
+#: templates/unfold/helpers/site_logo.html
+msgid "Home"
+msgstr ""
+
+#: templates/unfold/helpers/field_readonly_value_file.html
+#: templates/unfold/widgets/clearable_file_input.html
+#: templates/unfold/helpers/field_readonly_value_file.html
+#: templates/unfold/widgets/clearable_file_input.html
+msgid "Image preview"
+msgstr ""
+
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+msgid "Indent decrease"
+msgstr ""
+
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+msgid "Indent increase"
+msgstr ""
+
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+msgid "Italic"
+msgstr ""
+
+#: mixins/dataset_model_admin.py
+msgid ""
+"Items must be selected in order to perform actions on them. No items have "
+"been changed."
+msgstr ""
+
+#: templates/unfold/helpers/theme_switch.html
+#: templates/unfold/helpers/theme_switch_dropdown.html
+#: templates/unfold/helpers/theme_switch.html
+#: templates/unfold/helpers/theme_switch_dropdown.html
+msgid "Light"
+msgstr ""
+
+#: contrib/import_export/templates/admin/import_export/import_errors.html
+#: contrib/import_export/templates/admin/import_export/import_errors.html
+msgid "Line number"
+msgstr ""
+
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+msgid "Link"
+msgstr ""
+
+#: templates/admin/login.html templates/admin/login.html
+msgid "Log in"
+msgstr ""
+
+#: templates/registration/logged_out.html
+#: templates/registration/logged_out.html
+msgid "Log in again"
+msgstr ""
+
+#: templates/unfold/helpers/account_links.html
+#: templates/unfold/helpers/account_links.html
+msgid "Log out"
+msgstr ""
+
+#: contrib/guardian/templates/unfold/guardian/group_form.html
+#: contrib/guardian/templates/unfold/guardian/group_form.html
+msgid "Manage group"
+msgstr ""
+
+#: contrib/guardian/templates/unfold/guardian/user_form.html
+#: contrib/guardian/templates/unfold/guardian/user_form.html
+msgid "Manage user"
+msgstr ""
+
+#: contrib/constance/templates/admin/constance/includes/results_list.html
+#: contrib/constance/templates/admin/constance/includes/results_list.html
+msgid "Name"
+msgstr ""
+
+#: templates/unfold/helpers/command_help.html
+#: templates/unfold/helpers/shortcuts.html
+#: templates/unfold/helpers/command_help.html
+#: templates/unfold/helpers/shortcuts.html
+msgid "Navigate"
+msgstr ""
+
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+msgid "New value"
+msgstr ""
+
+#: templates/unfold/helpers/pagination_infinite.html
+#: templates/unfold/helpers/pagination_infinite.html
+msgid "Next"
+msgstr ""
+
+#: contrib/filters/admin/choice_filters.py
+#: contrib/filters/admin/choice_filters.py
+#: contrib/filters/admin/choice_filters.py
+#: contrib/filters/admin/choice_filters.py
+msgid "No"
+msgstr ""
+
+#: templates/unfold/components/table.html
+#: templates/unfold/components/table.html
+msgid "No data"
+msgstr ""
+
+#: templates/unfold/helpers/empty_results.html
+#: templates/unfold/helpers/empty_results.html
+msgid "No results found"
+msgstr ""
+
+#: templates/unfold/helpers/delete_submit_line.html
+#: templates/unfold/helpers/delete_submit_line.html
+msgid "No, take me back"
+msgstr ""
+
+#: contrib/import_export/templates/admin/import_export/import_validation.html
+#: contrib/import_export/templates/admin/import_export/import_validation.html
+msgid "Non field specific"
+msgstr ""
+
+#: contrib/filters/templates/unfold/filters/filters_numeric_slider.html
+#: contrib/filters/templates/unfold/filters/filters_numeric_slider.html
+msgid "Not enough data."
+msgstr ""
+
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+msgid "Object"
+msgstr ""
+
+#: templates/admin/delete_confirmation.html
+#: templates/admin/delete_selected_confirmation.html
+#: templates/admin/delete_confirmation.html
+#: templates/admin/delete_selected_confirmation.html
+msgid "Objects"
+msgstr ""
+
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+#: contrib/simple_history/templates/simple_history/object_history_list.html
+msgid "Old value"
+msgstr ""
+
+#: templates/unfold/helpers/shortcuts.html
+#: templates/unfold/helpers/shortcuts.html
+msgid "Open command tool"
+msgstr ""
+
+#: templates/unfold/helpers/shortcuts.html
+#: templates/unfold/helpers/shortcuts.html
+msgid "Open selection"
+msgstr ""
+
+#: templates/unfold/helpers/shortcuts.html
+#: templates/unfold/helpers/shortcuts.html
+msgid "Open selection in new tab"
+msgstr ""
+
+#: templates/unfold/helpers/shortcuts.html
+#: templates/unfold/helpers/shortcuts.html
+msgid "Open shortcuts list"
+msgstr ""
+
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+msgid "Ordered list"
+msgstr ""
+
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+msgid "Paragraph"
+msgstr ""
+
+#: contrib/import_export/templates/admin/import_export/import_validation.html
+#: contrib/import_export/templates/admin/import_export/import_validation.html
+msgid ""
+"Please correct these errors in your data where possible, then reupload it "
+"using the form above."
+msgstr ""
+
+#: contrib/simple_history/templates/simple_history/object_history_form.html
+#: contrib/simple_history/templates/simple_history/object_history_form.html
+msgid "Press the 'Change History' button below to edit the history."
+msgstr ""
+
+#: contrib/simple_history/templates/simple_history/object_history_form.html
+#: contrib/simple_history/templates/simple_history/object_history_form.html
+msgid ""
+"Press the 'Revert' button below to revert to this version of the object."
+msgstr ""
+
+#: templates/unfold/helpers/pagination_infinite.html
+#: templates/unfold/helpers/pagination_infinite.html
+msgid "Previous"
+msgstr ""
+
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+msgid "Quote"
+msgstr ""
+
+#: templates/unfold/helpers/history.html templates/unfold/helpers/history.html
+msgid "Recent actions"
+msgstr ""
+
+#: templates/unfold/helpers/command_history.html
+#: templates/unfold/helpers/command_history.html
+msgid "Recent searches"
+msgstr ""
+
+#: templates/unfold/helpers/display_header.html
+#: templates/unfold/helpers/display_header.html
+msgid "Record picture"
+msgstr ""
+
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+msgid "Redo"
+msgstr ""
+
+#: templates/unfold/helpers/change_list_headers.html
+#: templates/unfold/helpers/change_list_headers.html
+msgid "Remove from sorting"
+msgstr ""
+
+#: templates/unfold/helpers/empty_results.html
+#: templates/unfold/helpers/empty_results.html
+msgid "Reset filters"
+msgstr ""
+
+#: contrib/constance/templates/admin/constance/includes/results_list.html
+#: contrib/constance/templates/admin/constance/includes/results_list.html
+msgid "Reset to default"
+msgstr ""
+
+#: templates/unfold/helpers/unauthenticated_header.html
+#: templates/unfold/helpers/unauthenticated_header.html
+msgid "Return to site"
+msgstr ""
+
+#: contrib/simple_history/templates/simple_history/submit_line.html
+#: contrib/simple_history/templates/simple_history/submit_line.html
+msgid "Revert"
+msgstr ""
+
+#: contrib/import_export/templates/admin/import_export/import_validation.html
+#: contrib/import_export/templates/admin/import_export/import_validation.html
+msgid "Row"
+msgstr ""
+
+#: templates/admin/actions.html templates/admin/dataset_actions.html
+#: templates/admin/actions.html templates/admin/dataset_actions.html
+msgid "Run"
+msgstr ""
+
+#: templates/admin/actions.html templates/admin/actions.html
+msgid "Run the selected action"
+msgstr ""
+
+#: contrib/constance/templates/admin/constance/change_list.html
+#: contrib/guardian/templates/admin/guardian/model/obj_perms_manage_group.html
+#: contrib/guardian/templates/admin/guardian/model/obj_perms_manage_user.html
+#: templates/admin/pagination.html templates/admin/submit_line.html
+msgid "Save"
+msgstr ""
+
+#: templates/admin/submit_line.html templates/admin/submit_line.html
+msgid "Save and add another"
+msgstr ""
+
+#: templates/admin/submit_line.html templates/admin/submit_line.html
+msgid "Save and continue editing"
+msgstr ""
+
+#: templates/admin/submit_line.html templates/admin/submit_line.html
+msgid "Save and view"
+msgstr ""
+
+#: templates/admin/submit_line.html templates/admin/submit_line.html
+msgid "Save as new"
+msgstr ""
+
+#: templates/unfold/helpers/search.html templates/unfold/helpers/search.html
+msgid "Search apps and models..."
+msgstr ""
+
+#: templates/unfold/helpers/command_help.html
+#: templates/unfold/helpers/command_help.html
+msgid "Select"
+msgstr ""
+
+#: admin.py
+msgid "Select action"
+msgstr ""
+
+#: forms.py
+msgid "Select action to run"
+msgstr ""
+
+#: templatetags/unfold_list.py templatetags/unfold_list.py
+msgid "Select all objects on this page for an action"
+msgstr ""
+
+#: widgets.py
+msgid "Select currency"
+msgstr ""
+
+#: contrib/import_export/forms.py contrib/import_export/forms.py
+msgid "Select format"
+msgstr ""
+
+#: admin.py
+msgid "Select record"
+msgstr ""
+
+#: mixins/formfield_model_admin.py mixins/formfield_model_admin.py
+msgid "Select value"
+msgstr ""
+
+#: templates/admin/pagination.html templates/unfold/helpers/welcomemsg.html
+#: templates/admin/pagination.html templates/unfold/helpers/welcomemsg.html
+msgid "Show all"
+msgstr ""
+
+#: templates/unfold/helpers/change_list_filter_actions.html
+#: templates/unfold/helpers/change_list_filter_actions.html
+msgid "Show counts"
+msgstr ""
+
+#: contrib/import_export/templates/admin/import_export/import_validation.html
+#: contrib/import_export/templates/admin/import_export/import_validation.html
+msgid "Some rows failed to validate"
+msgstr ""
+
+#: contrib/hijack/templates/hijack/notification.html
+#: contrib/hijack/templates/hijack/notification.html
+msgid "stop impersonating"
+msgstr ""
+
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+msgid "Strike"
+msgstr ""
+
+#: contrib/import_export/templates/admin/import_export/export.html
+#: contrib/import_export/templates/admin/import_export/import_form.html
+#: contrib/import_export/templates/admin/import_export/export.html
+#: contrib/import_export/templates/admin/import_export/import_form.html
+msgid "Submit"
+msgstr ""
+
+#: templates/admin/includes/object_delete_summary.html
+#: templates/admin/includes/object_delete_summary.html
+msgid "Summary"
+msgstr ""
+
+#: templates/unfold/helpers/theme_switch.html
+#: templates/unfold/helpers/theme_switch_dropdown.html
+#: templates/unfold/helpers/theme_switch.html
+#: templates/unfold/helpers/theme_switch_dropdown.html
+msgid "System"
+msgstr ""
+
+#: templates/registration/logged_out.html
+#: templates/registration/logged_out.html
+msgid "Thanks for spending some quality time with the web site today."
+msgstr ""
+
+#: contrib/import_export/templates/admin/import_export/export.html
+#: contrib/import_export/templates/admin/import_export/export.html
+msgid "This exporter will export the following fields"
+msgstr ""
+
+#: contrib/import_export/templates/admin/import_export/resource_fields_list.html
+#: contrib/import_export/templates/admin/import_export/resource_fields_list.html
+msgid "This exporter will export the following fields:"
+msgstr ""
+
+#: contrib/import_export/templates/admin/import_export/resource_fields_list.html
+#: contrib/import_export/templates/admin/import_export/resource_fields_list.html
+msgid "This importer will import the following fields:"
+msgstr ""
+
+#: templates/unfold/helpers/edit_inline/inline_delete_undo.html
+#: templates/unfold/helpers/edit_inline/inline_delete_undo.html
+msgid "This item will be deleted."
+msgstr ""
+
+#: templates/unfold/helpers/empty_results.html
+#: templates/unfold/helpers/empty_results.html
+msgid ""
+"This page yielded into no results. Create a new item or reset your filters."
+msgstr ""
+
+#: contrib/filters/forms.py contrib/filters/forms.py widgets.py widgets.py
+#: contrib/filters/forms.py
+msgid "Time"
+msgstr ""
+
+#: contrib/filters/forms.py contrib/filters/forms.py contrib/filters/forms.py
+#: contrib/filters/forms.py
+msgid "To"
+msgstr ""
+
+#: templates/unfold/helpers/shortcuts.html
+#: templates/unfold/helpers/shortcuts.html
+msgid "Toggle dark/light mode"
+msgstr ""
+
+#: templates/unfold/helpers/shortcuts.html
+#: templates/unfold/helpers/shortcuts.html
+msgid "Toggle filter"
+msgstr ""
+
+#: templates/unfold/widgets/password_toggle.html
+#: templates/unfold/widgets/password_toggle.html
+msgid "Toggle password visibility"
+msgstr ""
+
+#: templates/unfold/helpers/shortcuts.html
+#: templates/unfold/helpers/shortcuts.html
+msgid "Toggle sidebar"
+msgstr ""
+
+#: templates/unfold/helpers/change_list_headers.html
+#: templates/unfold/helpers/change_list_headers.html
+msgid "Toggle sorting"
+msgstr ""
+
+#: templates/unfold/helpers/boolean.html templates/unfold/helpers/boolean.html
+msgid "True"
+msgstr ""
+
+#: templates/admin/search_form.html templates/unfold/helpers/command.html
+#: templates/admin/search_form.html templates/unfold/helpers/command.html
+msgid "Type to search"
+msgstr ""
+
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+msgid "Underlined"
+msgstr ""
+
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+msgid "Undo"
+msgstr ""
+
+#: templates/unfold/helpers/boolean.html templates/unfold/helpers/boolean.html
+msgid "Unknown"
+msgstr ""
+
+#: templates/unfold/helpers/history.html templates/unfold/helpers/history.html
+msgid "Unknown content"
+msgstr ""
+
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+msgid "Unlink"
+msgstr ""
+
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+#: contrib/forms/templates/unfold/forms/helpers/toolbar.html
+msgid "Unordered list"
+msgstr ""
+
+#: contrib/guardian/templates/unfold/guardian/user_form.html
+#: templates/admin/object_history.html
+#: contrib/guardian/templates/unfold/guardian/user_form.html
+#: templates/admin/object_history.html
+msgid "User"
+msgstr ""
+
+#: contrib/guardian/templates/unfold/guardian/user_form.html
+#: contrib/guardian/templates/unfold/guardian/user_form.html
+msgid "User permissions"
+msgstr ""
+
+#: contrib/constance/templates/admin/constance/includes/results_list.html
+#: contrib/filters/forms.py
+#: contrib/constance/templates/admin/constance/includes/results_list.html
+#: contrib/filters/forms.py
+msgid "Value"
+msgstr ""
+
+#: templates/unfold/helpers/app_list_default.html
+#: templates/unfold/helpers/edit_inline/inline_links.html
+#: templates/unfold/helpers/app_list_default.html
+#: templates/unfold/helpers/edit_inline/inline_links.html
+msgid "View"
+msgstr ""
+
+#: templates/unfold/helpers/account_links.html
+#: templates/unfold/helpers/account_links.html
+msgid "View site"
+msgstr ""
+
+#: contrib/import_export/templates/admin/import_export/import_errors.html
+#: contrib/import_export/templates/admin/import_export/import_errors.html
+msgid "View traceback"
+msgstr ""
+
+#: templatetags/unfold.py templatetags/unfold.py
+msgid "Welcome"
+msgstr ""
+
+#: contrib/filters/admin/choice_filters.py
+#: contrib/filters/admin/choice_filters.py
+#: contrib/filters/admin/choice_filters.py
+#: contrib/filters/admin/choice_filters.py
+msgid "Yes"
+msgstr ""
+
+#: templates/unfold/helpers/delete_submit_line.html
+#: templates/unfold/helpers/delete_submit_line.html
+msgid "Yes, I’m sure"
+msgstr ""
+
+#: mixins/nested_inlines_model_admin.py
+msgid "You can not create nested object without parent"
+msgstr ""
+
+#: templates/registration/logged_out.html
+#: templates/registration/logged_out.html
+msgid "You have been successfully logged out from the administration"
+msgstr ""

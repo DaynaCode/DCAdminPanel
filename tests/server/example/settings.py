@@ -20,6 +20,28 @@ AUTH_USER_MODEL = "example.User"
 
 USE_TZ = False
 
+# ---------------------------------------------------------------------------
+# Internationalization (i18n) — required for Persian RTL support
+# ---------------------------------------------------------------------------
+LANGUAGE_CODE = "fa"
+
+USE_I18N = True
+USE_L10N = True  # Deprecated in Django 5.x but kept for backward compat
+
+LANGUAGES = (
+    ("fa", _("Persian")),
+    ("en", _("English")),
+)
+
+# Locale path for Unfold's own translations (in addition to Django's bundled fa)
+LOCALE_PATHS = [
+    Path(__file__).resolve().parent.parent.parent / "src" / "unfold" / "locale",
+]
+
+# Tell Django that "fa" is a right-to-left language.
+# Django already knows this (see django.conf.locale.LANG_INFO["fa"]["bidi"] = True),
+# but Unfold's UNFOLD["LANGUAGES"]["navigation"] override must also set bidi=True.
+
 # TODO: remove once the setting is removed
 filterwarnings(
     "ignore", "The FORMS_URLFIELD_ASSUME_HTTPS transitional setting is deprecated."
@@ -58,6 +80,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -211,4 +234,25 @@ UNFOLD = {
         ("extra-url", "extra_url_name", "example.views.SiteExtraUrlView"),
     ],
     "TABS": "example.utils.tabs_callback",
+    # Show the language switcher in the header (top right).
+    "SHOW_LANGUAGES": True,
+    # Explicit language list with bidi flag (Required for RTL languages).
+    "LANGUAGES": {
+        "navigation": [
+            {
+                "bidi": True,
+                "code": "fa",
+                "name": "Persian",
+                "name_local": "فارسی",
+                "name_translated": "Persian",
+            },
+            {
+                "bidi": False,
+                "code": "en",
+                "name": "English",
+                "name_local": "English",
+                "name_translated": "English",
+            },
+        ],
+    },
 }

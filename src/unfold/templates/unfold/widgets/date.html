@@ -1,3 +1,15 @@
+{% load i18n %}
 <div class="flex flex-col max-w-2xl min-w-56 relative w-full">
-    {% include "django/forms/widgets/input.html" %}
+    {% if LANGUAGE_BIDI %}
+        <input type="text"
+               name="{{ widget.name }}"
+               {% if widget.value != None %}value="{{ widget.value|stringformat:'s' }}"{% endif %}
+               data-jalali-datepicker
+               data-gregorian="{% if widget.value != None %}{{ widget.value }}{% endif %}"
+               autocomplete="off"
+               class="{{ widget.attrs.class|default:'' }}"
+               id="{{ widget.attrs.id|default:'' }}">
+    {% else %}
+        {% include "django/forms/widgets/input.html" %}
+    {% endif %}
 </div>

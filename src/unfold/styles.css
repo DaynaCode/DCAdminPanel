@@ -9,13 +9,13 @@
   }
 }
 
-@source inline("aspect-square flex-1 group-hover:block self-start font-bold bg-white/[.06] border-white/40 h-[64px] w-[65px]! left-[65px] {dark:,}text-white/{0..100..10} {dark:,}bg-white/{0..100..10} {dark:,}text-{base,primary}-{50,{100..900},950} dark:hover:bg-white/[.06] {-,}translate-{x,y}-{1/2}");
-@source inline("{-,}{top,bottom,left,right}-{1/2,{0..8}} {!,}leading-[38px] {lg:,}leading-{6..16} {md:,lg:,}text-{default,base,link,icon,subtle,important,transparent,lg,xl,2xl,3xl,4xl}");
+@source inline("aspect-square flex-1 group-hover:block self-start font-bold bg-white/[.06] border-white/40 h-[64px] w-[65px]! start-[65px] {dark:,}text-white/{0..100..10} {dark:,}bg-white/{0..100..10} {dark:,}text-{base,primary}-{50,{100..900},950} dark:hover:bg-white/[.06] {-,}translate-{x,y}-{1/2}");
+@source inline("{-,}{top,bottom,start,end}-{1/2,{0..8}} {!,}leading-[38px] {lg:,}leading-{6..16} {md:,lg:,}text-{default,base,link,icon,subtle,important,transparent,lg,xl,2xl,3xl,4xl}");
 @source inline("bg-linear-to-{{t,r,b,l,tl,tr,bl,br}} {dark:,}{from,to}-{{{base,primary}-{50,{100..900..100},950}},white}");
-@source inline("rounded rounded-none rounded-[1px] rounded-{t,r,b,l} rounded-{t,r,b,l}-default rounded-{xs,sm,md,lg,xl,2xl,3xl,full,none}");
+@source inline("rounded rounded-none rounded-[1px] rounded-{t,r,b,l,s,e} rounded-{t,r,b,l,s,e}-default rounded-{xs,sm,md,lg,xl,2xl,3xl,full,none}");
 @source inline("{md:,lg:,xl:,2xl:,}{absolute,flex,relative,block,sticky}");
-@source inline("{!,}{-,}{lg:,}m{t,r,b,l,x,y,}-{px,{0..24}} {!,}{-,}{lg:,}p{t,r,b,l,x,y,}-{px,{0..24}}");
-@source inline("{md:,lg:,}border-{0,2} {md:,lg:,}border-{t,r,b,l} {md:,lg:,}border-{t,r,b,l}-{0,2}");
+@source inline("{!,}{-,}{lg:,}m{t,r,b,l,x,y,s,e,bs,be,is,ie,}-{px,{0..24}} {!,}{-,}{lg:,}p{t,r,b,l,x,y,s,e,bs,be,is,ie,}-{px,{0..24}}");
+@source inline("{md:,lg:,}border-{0,2} {md:,lg:,}border-{t,r,b,l,s,e} {md:,lg:,}border-{t,r,b,l,s,e}-{0,2}");
 @source inline("{!,}{hover:,dark:,}{bg,border}-primary-{50,{100..900..100},950}");
 @source inline("{hover:,dark:,}border-base-{50,{100..900..100},950} {hover:,dark:,}border-transparent");
 @source inline("{hover:,dark:,}bg-{base,red,green,blue,orange}-{50,{100..900..100},950} bg-clip-text");
@@ -39,7 +39,14 @@
 }
 
 @theme {
-  --font-sans: 'Inter', sans-serif;
+  /* Inter is the default LTR font. Vazirmatn is loaded conditionally for RTL. */
+  --font-sans: 'Inter', 'Vazirmatn', sans-serif;
+}
+
+/* When the document is RTL, Vazirmatn takes precedence so Persian glyphs
+   are rendered with a proper Persian font rather than the system fallback. */
+[dir="rtl"] {
+  --font-sans: 'Vazirmatn', 'Inter', sans-serif;
 }
 
 @theme inline{
@@ -162,11 +169,11 @@
     @apply relative;
 
     @variant after {
-      @apply absolute bg-base-900 content-[attr(data-tooltip)] hidden py-1 px-1.5 rounded-default text-xs text-white left-1/2 -top-2 -translate-x-1/2 -translate-y-full whitespace-nowrap z-[1000];
+      @apply absolute bg-base-900 content-[attr(data-tooltip)] hidden py-1 px-1.5 rounded-default text-xs text-white start-1/2 -top-2 -translate-x-1/2 -translate-y-full whitespace-nowrap z-[1000];
     }
 
     @variant before {
-      @apply absolute border-4 border-base-900 left-1/2 -translate-x-1/2 h-0 hidden rotate-45 -top-3.5 w-0 z-[999];
+      @apply absolute border-4 border-base-900 start-1/2 -translate-x-1/2 h-0 hidden rotate-45 -top-3.5 w-0 z-[999];
     }
 
     @variant dark {
@@ -200,24 +207,33 @@
     }
   }
 
-  .tooltip-left {
+  .tooltip-start {
     @variant after {
-      @apply -left-2 top-1/2 -translate-y-1/2 -translate-x-full;
+      @apply -start-2 top-1/2 -translate-y-1/2 -translate-x-full;
     }
 
     @variant before {
-      @apply -left-3.5 top-1/2 -translate-y-1/2 translate-x-[0px];
+      @apply -start-3.5 top-1/2 -translate-y-1/2 translate-x-[0px];
+    }
+  }
+
+  /* Backward-compatible aliases (deprecated — prefer tooltip-start/tooltip-end) */
+  .tooltip-left {
+    @extend .tooltip-start;
+  }
+
+  .tooltip-end {
+    @variant after {
+      @apply start-auto -end-2 top-1/2 -translate-y-1/2 translate-x-full;
+    }
+
+    @variant before {
+      @apply start-auto -end-3.5 top-1/2 -translate-y-1/2 translate-x-[0px];
     }
   }
 
   .tooltip-right {
-    @variant after {
-      @apply left-auto -right-2 top-1/2 -translate-y-1/2 translate-x-full;
-    }
-
-    @variant before {
-      @apply left-auto -right-3.5 top-1/2 -translate-y-1/2 translate-x-[0px];
-    }
+    @extend .tooltip-end;
   }
 }
 
@@ -231,7 +247,7 @@
 }
 
 @utility scrollable-top {
-  @apply after:absolute after:content-[''] after:bg-linear-to-t after:from-base-100 after:h-4 after:left-0 after:right-0 after:-top-px after:-translate-y-full dark:after:bg-none;
+  @apply after:absolute after:content-[''] after:bg-linear-to-t after:from-base-100 after:h-4 after:start-0 after:end-0 after:-top-px after:-translate-y-full dark:after:bg-none;
 }
 
 @utility md-16 {
@@ -243,7 +259,7 @@
 }
 
 .errorlist {
-  @apply *:before:align-bottom *:before:content-['warning'] *:before:material-symbols-outlined *:before:mr-1;
+  @apply *:before:align-bottom *:before:content-['warning'] *:before:material-symbols-outlined *:before:me-1;
 }
 
 [x-cloak] {
@@ -288,7 +304,7 @@ table tr.selected th {
  Datetime
  *******************************************************/
 .datetimeshortcuts {
-  @apply absolute flex flex-row-reverse items-center right-px text-[0px] top-px;
+  @apply absolute flex flex-row-reverse items-center end-px text-[0px] top-px;
 }
 
 .datetimeshortcuts a,
@@ -326,16 +342,16 @@ table tr.selected th {
 }
 
 .timezonewarning {
-  @apply absolute block items-center right-11 top-2 text-base-500 truncate;
+  @apply absolute block items-center end-11 top-2 text-base-500 truncate;
   font-size: 0;
 }
 
 .timezonewarning:hover {
-  @apply bg-white bottom-px leading-9 left-px right-px px-3 rounded-default text-xs top-px dark:bg-base-900;
+  @apply bg-white bottom-px leading-9 start-px end-px px-3 rounded-default text-xs top-px dark:bg-base-900;
 }
 
 .timezonewarning:hover:before {
-  @apply hidden mr-2;
+  @apply hidden me-2;
 }
 
 .timezonewarning:before {
@@ -424,6 +440,9 @@ table tr.selected th {
 }
 
 .related-widget-wrapper-link {
+  /* In LTR: order-last puts the link at the end (right side).
+     In RTL: order-last still puts it at the end (now the left side) — which is correct
+     because flexbox order is direction-agnostic. */
   @apply order-last;
 }
 
@@ -473,8 +492,8 @@ table tr.selected th {
 }
 
 .select2-container.select2-container--admin-autocomplete .select2-selection--single .select2-selection__arrow {
-  @apply flex h-9 items-center mr-2 -mt-px;
-  @apply after:left-0 after:leading-none after:m-0 after:material-symbols-outlined after:text-base-400 after:text-lg dark:after:text-base-500;
+  @apply flex h-9 items-center me-2 -mt-px;
+  @apply after:start-0 after:leading-none after:m-0 after:material-symbols-outlined after:text-base-400 after:text-lg dark:after:text-base-500;
 }
 
 .select2-container.select2-container--admin-autocomplete .select2-selection--single .select2-selection__arrow:after {
@@ -486,11 +505,11 @@ table tr.selected th {
 }
 
 .select2-container.select2-container--admin-autocomplete .select2-search--dropdown {
-  @apply border-b border-base-200 py-1.5 px-1 relative dark:border-base-700 before:absolute before:content-['search'] before:material-symbols-outlined before:left-4 before:top-2.5 before:text-base-400 before:text-lg dark:before:text-base-500;
+  @apply border-b border-base-200 py-1.5 px-1 relative dark:border-base-700 before:absolute before:content-['search'] before:material-symbols-outlined before:start-4 before:top-2.5 before:text-base-400 before:text-lg dark:before:text-base-500;
 }
 
 .select2-container.select2-container--admin-autocomplete .select2-search--dropdown .select2-search__field {
-  @apply bg-base-100 border-0 border-base-200 border-solid grow font-medium mx-0 outline-hidden px-3 py-2 pl-9 rounded-default text-font-default-light text-sm w-full dark:bg-base-800 dark:border-base-800 dark:text-font-default-dark;
+  @apply bg-base-100 border-0 border-base-200 border-solid grow font-medium mx-0 outline-hidden px-3 py-2 ps-9 rounded-default text-font-default-light text-sm w-full dark:bg-base-800 dark:border-base-800 dark:text-font-default-dark;
 }
 
 .select2-container .select2-results__options {
@@ -517,23 +536,23 @@ table tr.selected th {
   @apply block mb-0.5 mx-1 px-2 py-2 rounded-default text-font-default-light transition-all hover:bg-base-100 hover:text-base-700 dark:hover:bg-base-800 dark:hover:text-base-200 dark:text-font-default-dark last:mb-0;
 }
 .select2-container.select2-container--admin-autocomplete .select2-results__option[aria-selected="true"] {
-  @apply text-primary-600 dark:text-primary-500 flex items-center text-primary-600 dark:text-primary-500 after:content-['check'] after:material-symbols-outlined after:ml-auto;
+  @apply text-primary-600 dark:text-primary-500 flex items-center text-primary-600 dark:text-primary-500 after:content-['check'] after:material-symbols-outlined after:ms-auto;
 }
 
 .select2-container.select2-container--admin-autocomplete .select2-selection--multiple .select2-selection__clear {
-  @apply m-0 mr-3 top-0;
+  @apply m-0 me-3 top-0;
 }
 
 .select2-container.select2-container--admin-autocomplete .select2-selection--multiple .select2-selection__rendered {
-  @apply pl-1 pr-6 py-0 pt-1;
+  @apply ps-1 pe-6 py-0 pt-1;
 }
 
 .select2-container.select2-container--admin-autocomplete .select2-selection--single .select2-selection__rendered {
-  @apply pr-8;
+  @apply pe-8;
 }
 
 .select2-container--admin-autocomplete .select2-selection--multiple li.select2-selection__choice {
-  @apply bg-base-100 block font-medium h-7 leading-7 m-0 mr-1 mb-1 px-2 shadow-inner text-sm text-base-600 hover:text-base-700 truncate dark:bg-base-800 dark:text-base-300 dark:hover:text-base-200;
+  @apply bg-base-100 block font-medium h-7 leading-7 m-0 me-1 mb-1 px-2 shadow-inner text-sm text-base-600 hover:text-base-700 truncate dark:bg-base-800 dark:text-base-300 dark:hover:text-base-200;
 }
 
 .select2-container--admin-autocomplete .select2-selection--multiple li.select2-selection__choice .select2-selection__choice__remove {
@@ -547,7 +566,7 @@ table tr.selected th {
 }
 
 .select2-container--admin-autocomplete .select2-selection--multiple li.select2-search--inline .select2-search__field {
-  @apply m-0 h-7 ml-2 text-base-500 text-sm;
+  @apply m-0 h-7 ms-2 text-base-500 text-sm;
 }
 
 /*******************************************************
@@ -575,7 +594,7 @@ fieldset details > summary {
 }
 
 fieldset details > summary:after {
-  @apply material-symbols-outlined absolute cursor-pointer right-3 top-2.5;
+  @apply material-symbols-outlined absolute cursor-pointer end-3 top-2.5;
   content: "expand_more";
 }
 
@@ -596,6 +615,8 @@ fieldset details[open] > summary:after {
 
 .calendarbox,
 .clockbox {
+  /* Centered modal: left-1/2 + -translate-x-1/2 works in both LTR and RTL
+     because the visual center of the screen is at 50% regardless of direction. */
   @apply bg-white border border-base-200 rounded-default shadow-xs w-80 !z-70 dark:bg-base-800 dark:border-base-700 fixed! left-1/2! top-1/2! -translate-x-1/2 -translate-y-1/2;
 }
 
@@ -639,8 +660,11 @@ fieldset details[open] > summary:after {
   @apply block border-t border-base-200 py-2 text-center text-xs text-red-600 dark:border-base-700 dark:text-red-500;
 }
 
+/* In LTR: previous = left, next = right.
+   In RTL: previous should still be visually on the start side (which is now right).
+   Using inset-inline-start/end makes this direction-aware. */
 .calendarnav-previous {
-  @apply absolute block ml-2 mt-2 left-0 text-[0px] top-0;
+  @apply absolute block ms-2 mt-2 start-0 text-[0px] top-0;
 }
 
 .calendarnav-next,
@@ -659,7 +683,7 @@ fieldset details[open] > summary:after {
 }
 
 .calendarnav-next {
-  @apply absolute block mr-2 mt-2 right-0 text-[0px] top-0;
+  @apply absolute block me-2 mt-2 end-0 text-[0px] top-0;
 }
 
 /*******************************************************
@@ -687,7 +711,7 @@ fieldset details[open] > summary:after {
  Htmx
  *******************************************************/
 .htmx-indicator.htmx-swapping:before {
-  @apply absolute bg-white bottom-0 left-0 opacity-80 transition-all right-0 top-0;
+  @apply absolute bg-white bottom-0 start-0 opacity-80 transition-all end-0 top-0;
   content: "";
 }
 
@@ -715,7 +739,7 @@ textarea#searchbar {
 }
 
 div.djangoql-completion {
-  @apply border border-base-200 rounded-default shadow-xs bg-white dark:border-base-700 dark:bg-base-800 -ml-[39px] mt-[6px] w-[384px] z-40;
+  @apply border border-base-200 rounded-default shadow-xs bg-white dark:border-base-700 dark:bg-base-800 -ms-[39px] mt-[6px] w-[384px] z-40;
 }
 
 div.djangoql-completion ul {
@@ -731,7 +755,7 @@ div.djangoql-completion li.active {
 }
 
 div.djangoql-completion li i {
-  @apply ml-auto text-sm text-default;
+  @apply ms-auto text-sm text-default;
 }
 
 div.djangoql-completion .syntax-help {
@@ -739,8 +763,8 @@ div.djangoql-completion .syntax-help {
 }
 
 .djangoql-toggle {
-  @apply appearance-none bg-white block border border-base-300 cursor-pointer h-4 min-w-4 relative rounded-[4px] shadow-xs w-4 hover:border-base-400 dark:bg-base-700 dark:border-base-500 dark:checked:after:text-white focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary-500 after:absolute after:content-['check\_small'] after:flex! after:h-4 after:items-center after:justify-center after:leading-none after:material-symbols-outlined after:-ml-px after:-mt-px after:text-white after:transition-all after:w-4 dark:after:text-base-700 checked:bg-primary-600 dark:checked:bg-primary-600 checked:border-primary-600 dark:checked:border-primary-600 checked:transition-all checked:hover:border-primary-600;
-  @apply relative -ml-4.5;
+  @apply appearance-none bg-white block border border-base-300 cursor-pointer h-4 min-w-4 relative rounded-[4px] shadow-xs w-4 hover:border-base-400 dark:bg-base-700 dark:border-base-500 dark:checked:after:text-white focus:outline focus:outline-2 focus:outline-offset-2 focus:outline-primary-500 after:absolute after:content-['check\_small'] after:flex! after:h-4 after:items-center after:justify-center after:leading-none after:material-symbols-outlined after:-ms-px after:-mt-px after:text-white after:transition-all after:w-4 dark:after:text-base-700 checked:bg-primary-600 dark:checked:bg-primary-600 checked:border-primary-600 dark:checked:border-primary-600 checked:transition-all checked:hover:border-primary-600;
+  @apply relative -ms-4.5;
 }
 
 /*******************************************************
@@ -811,7 +835,7 @@ div.jsoneditor-tree,
 }
 
 .ace-jsoneditor .ace_gutter {
-  @apply border-r border-base-200 bg-base-100 text-subtle dark:bg-base-800 dark:border-base-700;
+  @apply border-e border-base-200 bg-base-100 text-subtle dark:bg-base-800 dark:border-base-700;
 }
 
 .ace-jsoneditor .ace_gutter-active-line {
@@ -827,7 +851,7 @@ div.jsoneditor-tree,
 }
 
 .ace-jsoneditor .ace_indent-guide {
-  @apply bg-none border-r border-base-200 dark:border-base-700;
+  @apply bg-none border-e border-base-200 dark:border-base-700;
 }
 
 .ace-jsoneditor .ace_marker-layer .ace_selection {
@@ -856,7 +880,7 @@ div.jsoneditor-tree,
 }
 
 .jsoneditor .jsoneditor-search .jsoneditor-frame .jsoneditor-refresh {
-  @apply bg-none ml-1;
+  @apply bg-none ms-1;
 }
 
 .jsoneditor .jsoneditor-search .jsoneditor-frame .jsoneditor-refresh:after {
@@ -977,7 +1001,7 @@ div.jsoneditor-tree,
 }
 
 .jsoneditor-contextmenu .jsoneditor-menu li button .jsoneditor-expand {
-  @apply !flex !items-center justify-center !m-0 !p-0 !top-0.5 !right-0.5;
+  @apply !flex !items-center justify-center !m-0 !p-0 !top-0.5 !end-0.5;
 }
 
 .jsoneditor .jsoneditor-selected,
@@ -1023,7 +1047,7 @@ div.jsoneditor-tree,
 
 
 .jsoneditor-contextmenu .jsoneditor-menu button.jsoneditor-expand {
-  @apply absolute !border-none right-0 top-0 hover:!bg-transparent;
+  @apply absolute !border-none end-0 top-0 hover:!bg-transparent;
 }
 
 .jsoneditor .jsoneditor-separator {
@@ -1056,7 +1080,7 @@ div.jsoneditor-tree,
 }
 
 .jsoneditor-modal.pico-content .pico-close {
-  @apply !text-[0px] !text-icon -mt-[13px] mr-2 hover:!text-important;
+  @apply !text-[0px] !text-icon -mt-[13px] me-2 hover:!text-important;
 }
 
 .jsoneditor-modal.pico-content .pico-close:after {
@@ -1102,4 +1126,183 @@ div.jsoneditor-tree,
 
 .jsoneditor-modal table td, .jsoneditor-modal table th {
   @apply !font-sans !text-default;
+}
+
+/*******************************************************
+ RTL Overrides
+ *******************************************************
+ These rules apply ONLY when the document direction is RTL.
+ They handle cases that logical properties alone cannot fix:
+   - Directional icons (arrow_forward/arrow_back)
+   - Asymmetric layouts (calendar nav, selector arrows)
+   - Numeric inputs that must remain LTR inside RTL text
+   - Material Symbols ligatures (must always stay LTR)
+   - Sortable.js drag direction
+*/
+@layer rtl-overrides {
+  [dir="rtl"] {
+    /* Flip selector arrows so they point the correct way in RTL */
+    .selector-add:after {
+      content: "arrow_back";
+    }
+
+    .selector-remove:after {
+      content: "arrow_forward";
+    }
+
+    /* Material Symbols ligatures require LTR text direction.
+       Without this, icons would render as raw text in RTL context. */
+    .material-symbols-outlined,
+    [class*="material-symbols-outlined"] {
+      direction: ltr;
+    }
+
+    /* Numeric / phone / email inputs stay LTR but right-aligned (end) */
+    input[type="number"],
+    input[type="tel"],
+    input[type="email"],
+    input[type="url"] {
+      direction: ltr;
+      text-align: end;
+    }
+
+    /* Code blocks and preformatted text remain LTR */
+    pre,
+    code,
+    kbd,
+    samp {
+      direction: ltr;
+      text-align: start;
+    }
+
+    /* Chart.js: enable RTL mode (affects legend, tooltip, axis direction) */
+    canvas {
+      direction: ltr; /* Charts themselves stay LTR; container handles RTL */
+    }
+
+    /* Trix editor: keep content area LTR for HTML editing */
+    trix-editor {
+      direction: rtl;
+    }
+
+    /* DjangoQL completion box: arrow indicator should point into the input */
+    div.djangoql-completion {
+      /* In RTL, the dropdown opens from the right side of the search bar,
+         so the negative margin should come from the end (right in RTL). */
+      margin-inline-start: 0;
+      margin-inline-end: -39px;
+    }
+
+    /* Pagination: previous arrow on the right, next arrow on the left */
+    .pagination a[rel="prev"]:after,
+    a.previous-page-link:after {
+      content: "navigate_next";
+    }
+
+    .pagination a[rel="next"]:after,
+    a.next-page-link:after {
+      content: "navigate_before";
+    }
+
+    /* Calendar navigation: in RTL, "previous" sits on the start (right) side
+       and "next" sits on the end (left) side. The base styles already use
+       inset-inline-start/end, so this is just the arrow flip. */
+    .calendarnav-previous:after {
+      content: "navigate_next";
+    }
+
+    .calendarnav-next:after {
+      content: "navigate_before";
+    }
+
+    /* Tooltip directional variants: in RTL, "left" becomes "start" visually.
+       Our logical-property versions (.tooltip-start/.tooltip-end) handle this,
+       but legacy .tooltip-left/.tooltip-right usage needs explicit flipping. */
+    .tooltip-left:after {
+      inset-inline-end: -0.5rem;
+      inset-inline-start: auto;
+      transform: translate(100%, -50%);
+    }
+
+    .tooltip-right:after {
+      inset-inline-start: -0.5rem;
+      inset-inline-end: auto;
+      transform: translate(-100%, -50%);
+    }
+
+    /* JSON editor expand button: align to the start (right in RTL) */
+    .jsoneditor-contextmenu .jsoneditor-menu li button .jsoneditor-expand {
+      inset-inline-end: 0.125rem;
+    }
+
+    .jsoneditor-contextmenu .jsoneditor-menu button.jsoneditor-expand {
+      inset-inline-end: 0;
+    }
+
+    /* Select2 dropdown arrow: keep on the end (left in RTL) */
+    .select2-container--admin-autocomplete
+      .select2-selection--single
+      .select2-selection__arrow {
+      inset-inline-end: 0.5rem;
+    }
+
+    /* Select2 search icon: position at start (right in RTL) */
+    .select2-container--admin-autocomplete
+      .select2-search--dropdown:before {
+      inset-inline-start: 1rem;
+    }
+
+    /* Select2 search field padding: icon on start, text after */
+    .select2-container--admin-autocomplete
+      .select2-search--dropdown
+      .select2-search__field {
+      padding-inline-start: 2.25rem;
+      padding-inline-end: 0.75rem;
+    }
+
+    /* Select2 rendered text: clear button on end (left in RTL) */
+    .select2-container--admin-autocomplete
+      .select2-selection--single
+      .select2-selection__rendered {
+      padding-inline-end: 2rem;
+      padding-inline-start: 0.75rem;
+    }
+
+    /* Select2 multiple choice chips: gap on start side */
+    .select2-container--admin-autocomplete
+      .select2-selection--multiple
+      li.select2-selection__choice {
+      margin-inline-end: 0.25rem;
+      margin-inline-start: 0;
+    }
+
+    .select2-container--admin-autocomplete
+      .select2-selection--multiple
+      li.select2-search--inline
+      .select2-search__field {
+      margin-inline-start: 0.5rem;
+    }
+
+    /* Fieldset collapse indicator: align to end (left in RTL) */
+    fieldset details > summary:after {
+      inset-inline-end: 0.75rem;
+    }
+
+    /* Datetime shortcuts: position at end (left in RTL) */
+    .datetimeshortcuts {
+      inset-inline-end: 1px;
+      inset-inline-start: auto;
+    }
+
+    /* Timezone warning: position at end (left in RTL) */
+    .timezonewarning {
+      inset-inline-end: 2.75rem;
+      inset-inline-start: auto;
+    }
+
+    /* Range input thumb: direction-aware */
+    input[type="range"] {
+      direction: rtl;
+    }
+  }
 }

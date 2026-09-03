@@ -896,7 +896,13 @@ const renderCharts = () => {
 				},
 			};
 		}
-		Chart.defaults.font.family = "Inter";
+		// Pick font family based on document direction so Persian text in charts
+		// is rendered with Vazirmatn (the bundled Persian font) instead of the
+		// system fallback. Vazirmatn is loaded via skeleton.html for [dir="rtl"].
+		const isRTL = document.documentElement.dir === "rtl";
+		Chart.defaults.font.family = isRTL
+			? "'Vazirmatn', 'Inter', sans-serif"
+			: "'Inter', 'Vazirmatn', sans-serif";
 		Chart.defaults.font.size = 12;
 
 		const chartConfig = {

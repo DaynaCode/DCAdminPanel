@@ -85,6 +85,27 @@ include = ["src/unfold"]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
+# ---------------------------------------------------------------------------
+# Translation extraction (i18n)
+# ---------------------------------------------------------------------------
+# Run `django-admin makemessages -l fa` from `src/unfold/` to extract strings.
+# Run `django-admin compilemessages` from `src/unfold/` to compile .po -> .mo.
+# babel.cfg lives at `src/unfold/babel.cfg`.
+# ---------------------------------------------------------------------------
+[tool.babel]
+mapping_config = "src/unfold/babel.cfg"
+extract_messages_keywords = [
+    "_",
+    "gettext",
+    "gettext_lazy",
+    "ngettext",
+    "ngettext_lazy",
+    "pgettext",
+    "pgettext_lazy",
+    "npgettext",
+    "npgettext_lazy",
+]
+
 [tool.ruff]
 fix = true
 line-length = 88

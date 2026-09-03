@@ -20,6 +20,7 @@
         <title>{{ environment_title_prefix|default:"" }} {% block title %}{% endblock %}</title>
 
         <link href="{% static "unfold/fonts/inter/styles.css" %}" rel="stylesheet">
+        <link href="{% static "unfold/fonts/vazirmatn/styles.css" %}" rel="stylesheet">
         <link href="{% static "unfold/fonts/material-symbols/styles.css" %}" rel="stylesheet">
 
         {% for style in styles %}
@@ -50,6 +51,10 @@
         {% block extrahead %}{% endblock %}
 
         <script src="{% static 'unfold/js/app.js' %}"></script>
+
+        {% if LANGUAGE_BIDI %}
+            <script src="{% static 'unfold/js/jalali.js' %}"></script>
+        {% endif %}
 
         {% block responsive %}
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
