@@ -1,15 +1,20 @@
-from django.conf.urls.i18n import i18n_patterns
+"""
+URL configuration for the example test server.
+
+By default, admin URLs are NOT wrapped with i18n_patterns because the
+existing test suite calls `/admin/` directly (e.g. `admin_client.get("/admin/")`).
+Wrapping would cause a 302 redirect to `/fa/admin/` and break those tests.
+
+Instead, we rely on LocaleMiddleware + Django's LANGUAGE_CODE setting
+(defaulting to "fa" in settings.py) for language detection. The set-language
+view is still available at `/i18n/setlang/` for the language switcher.
+"""
 from django.contrib import admin
 from django.urls import include, path
 
-# Non-i18n URLs (must NOT be inside i18n_patterns).
-# The set-language view must live here so it can be reached from any language prefix.
 urlpatterns = [
-    path("i18n/", include("django.conf.urls.i18n")),
-    path("hijack/", include("hijack.urls")),
-]
-
-# Admin URLs wrapped with i18n_patterns so they get a language prefix (/fa/admin/, /en/admin/).
-urlpatterns += i18n_patterns(
     path("admin/", admin.site.urls),
-)
+    path("hijack/", include("hijack.urls")),
+    # Language switch endpoint — must be reachable from any URL prefix.
+    path("i18n/", include("django.conf.urls.i18n")),
+]

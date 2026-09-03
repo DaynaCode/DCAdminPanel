@@ -99,3 +99,19 @@ UNFOLD = {
 # def languages_callback(request):
 #     return [get_language_info(lang) for lang in ["en", "de", "fr"]]
 ```
+
+## RTL languages (Persian, Arabic, Hebrew)
+
+For right-to-left languages, set `bidi: True` in the language entry. This tells
+Unfold to render the document with `dir="rtl"`, swap the font to Vazirmatn
+(Persian), and load the Jalali calendar widget for date inputs.
+
+See the dedicated [RTL & Persian (Jalali) Support](./rtl-and-jalali.md) guide
+for a complete walkthrough of:
+
+- Automatic RTL layout switching
+- Vazirmatn font bundling and conditional loading
+- CSS logical properties (no manual overrides needed)
+- Jalali calendar widget for date inputs
+- Jalali date formatting in history pages and recent actions
+- Persian translation extraction and compilation

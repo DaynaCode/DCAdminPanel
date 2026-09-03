@@ -77,6 +77,7 @@ class MyModelAdmin(ModelAdmin):
 - **Font colors:** Adjust font colors for better readability.
 - **Changeform modes:** Display fields in compressed mode in the change form.
 - **Language switcher:** Allow changing language directly from the admin area.
+- **RTL & Persian (Jalali) support:** Full right-to-left layout, Vazirmatn Persian font, Jalali calendar widget, and Persian translations out of the box. See [RTL & Persian (Jalali) Support](docs/configuration/rtl-and-jalali.md).
 - **Infinite paginator:** Efficiently handle large datasets with seamless pagination that reduces server load.
 - **Parallel admin:** Supports [running the default admin](https://unfoldadmin.com/blog/migrating-django-admin-unfold/?utm_medium=github&utm_source=unfold) alongside Unfold.
 - **Third-party packages:** Provides default support for multiple popular applications.

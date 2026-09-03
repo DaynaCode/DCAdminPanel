@@ -23,14 +23,18 @@ USE_TZ = False
 # ---------------------------------------------------------------------------
 # Internationalization (i18n) — required for Persian RTL support
 # ---------------------------------------------------------------------------
-LANGUAGE_CODE = "fa"
+# Default language is English to keep the existing test suite (which asserts
+# against English strings) green. Persian (fa) is available as an alternate
+# language — switch via the language switcher or by setting LANGUAGE_CODE="fa"
+# in your own project settings.
+LANGUAGE_CODE = "en"
 
 USE_I18N = True
 USE_L10N = True  # Deprecated in Django 5.x but kept for backward compat
 
 LANGUAGES = (
-    ("fa", _("Persian")),
     ("en", _("English")),
+    ("fa", _("Persian")),
 )
 
 # Locale path for Unfold's own translations (in addition to Django's bundled fa)

@@ -15,11 +15,11 @@ msgstr ""
 
 #: contrib/inlines/admin.py contrib/inlines/admin.py
 msgid "%(class_name)s %(instance)s"
-msgstr ""
+msgstr "%(class_name)s %(instance)s"
 
 #: templates/admin/object_history.html templates/admin/object_history.html
 msgid "Action"
-msgstr ""
+msgstr "عملیات"
 
 #: templates/unfold/helpers/app_list_default.html
 #: templates/unfold_crispy/layout/table_inline_formset.html
@@ -31,12 +31,12 @@ msgstr "افزودن"
 #: contrib/forms/templates/unfold/forms/array.html
 #: contrib/forms/templates/unfold/forms/array.html
 msgid "Add new item"
-msgstr ""
+msgstr "افزودن مورد جدید"
 
 #: templates/unfold_crispy/layout/table_inline_formset.html
 #: templates/unfold_crispy/layout/table_inline_formset.html
 msgid "Add row"
-msgstr ""
+msgstr "افزودن ردیف"
 
 #: contrib/filters/admin/choice_filters.py
 #: contrib/filters/admin/choice_filters.py
@@ -52,7 +52,7 @@ msgstr "همه برنامه‌ها"
 
 #: contrib/inlines/admin.py contrib/inlines/admin.py
 msgid "and"
-msgstr ""
+msgstr "و"
 
 #: templates/unfold/helpers/change_list_filter_actions.html
 #: templates/unfold/helpers/change_list_filter_actions.html
@@ -67,7 +67,7 @@ msgstr "میانبرهای موجود"
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 msgid "Bold"
-msgstr ""
+msgstr "ضخیم"
 
 #: contrib/filters/admin/choice_filters.py
 #: contrib/filters/admin/choice_filters.py
@@ -75,7 +75,7 @@ msgstr ""
 #: contrib/filters/admin/choice_filters.py
 #: contrib/filters/admin/dropdown_filters.py
 msgid "By %(filter_title)s"
-msgstr ""
+msgstr "بر اساس %(filter_title)s"
 
 #: templates/unfold/helpers/dialog.html templates/unfold/helpers/dialog.html
 msgid "Cancel"
@@ -91,7 +91,7 @@ msgstr "تغییر"
 #: contrib/simple_history/templates/simple_history/submit_line.html
 #: contrib/simple_history/templates/simple_history/submit_line.html
 msgid "Change History"
-msgstr ""
+msgstr "تاریخچه تغییرات"
 
 #: templates/admin/auth/user/change_password.html
 #: templates/registration/password_change_form.html
@@ -104,12 +104,12 @@ msgstr "تغییر رمز عبور"
 #: contrib/simple_history/templates/simple_history/object_history_list.html
 #: contrib/simple_history/templates/simple_history/object_history_list.html
 msgid "Change reason"
-msgstr ""
+msgstr "دلیل تغییر"
 
 #: contrib/simple_history/templates/simple_history/object_history_list.html
 #: contrib/simple_history/templates/simple_history/object_history_list.html
 msgid "Changed by"
-msgstr ""
+msgstr "تغییر توسط"
 
 #: templates/unfold/helpers/shortcuts.html
 #: templates/unfold/helpers/shortcuts.html
@@ -119,7 +119,7 @@ msgstr "میانبرهای لیست تغییرات"
 #: contrib/simple_history/templates/simple_history/object_history_list.html
 #: contrib/simple_history/templates/simple_history/object_history_list.html
 msgid "Changes"
-msgstr ""
+msgstr "تغییرات"
 
 #: templates/unfold/widgets/clearable_file_input.html
 #: templates/unfold/widgets/clearable_file_input.html
@@ -134,7 +134,7 @@ msgstr "انتخاب فایل برای آپلود"
 #: templates/unfold/helpers/command_help.html
 #: templates/unfold/helpers/shortcuts.html
 msgid "Clear"
-msgstr ""
+msgstr "پاک کردن"
 
 #: templates/unfold/helpers/change_list_filter_actions.html
 #: templates/unfold/helpers/change_list_filter_actions.html
@@ -154,7 +154,7 @@ msgstr "برای انتخاب اشیاء در همه صفحات اینجا کل�
 #: templates/unfold/helpers/edit_inline/inline_delete_undo.html
 #: templates/unfold/helpers/edit_inline/inline_delete_undo.html
 msgid "Click to cancel"
-msgstr ""
+msgstr "برای انصراف کلیک کنید"
 
 #: templates/unfold/helpers/field_readonly_value_file.html
 #: templates/unfold/helpers/field_readonly_value_file.html
@@ -188,12 +188,12 @@ msgstr "میانبرهای ابزار فرمان"
 #: contrib/simple_history/templates/simple_history/object_history_list.html
 #: contrib/simple_history/templates/simple_history/object_history_list.html
 msgid "Comment"
-msgstr ""
+msgstr "نظر"
 
 #: contrib/import_export/templates/admin/import_export/import_confirm.html
 #: contrib/import_export/templates/admin/import_export/import_confirm.html
 msgid "Confirm import"
-msgstr ""
+msgstr "تأیید وارد کردن"
 
 #: templates/unfold/helpers/shortcuts.html
 #: templates/unfold/helpers/shortcuts.html
@@ -233,7 +233,7 @@ msgstr "تاریخ تا"
 #: contrib/simple_history/templates/simple_history/object_history_list.html
 #: templates/admin/object_history.html
 msgid "Date/time"
-msgstr ""
+msgstr "تاریخ/زمان"
 
 #: contrib/constance/templates/admin/constance/includes/results_list.html
 #: contrib/constance/templates/admin/constance/includes/results_list.html
@@ -249,13 +249,13 @@ msgstr "حذف"
 #: templates/unfold/helpers/site_branding.html
 #: templates/unfold/helpers/site_branding.html
 msgid "Django administration"
-msgstr ""
+msgstr "مدیریت جنگو"
 
 #: templates/admin/app_index.html templates/admin/base_site.html
 #: templates/admin/index.html templates/admin/login.html
 #: templates/unfold/layouts/base.html
 msgid "Django site admin"
-msgstr ""
+msgstr "مدیریت سایت جنگو"
 
 #: contrib/guardian/templates/unfold/guardian/group_form.html
 #: contrib/guardian/templates/unfold/guardian/user_form.html
@@ -267,12 +267,12 @@ msgstr "ویرایش"
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 msgid "Enter an URL"
-msgstr ""
+msgstr "یک آدرس وارد کنید"
 
 #: contrib/import_export/templates/admin/import_export/change_form.html
 #: contrib/import_export/templates/admin/import_export/change_form.html
 msgid "Export"
-msgstr ""
+msgstr "صادرات"
 
 #: templates/unfold/helpers/boolean.html templates/unfold/helpers/boolean.html
 msgid "False"
@@ -281,7 +281,7 @@ msgstr "غلط"
 #: contrib/simple_history/templates/simple_history/object_history_list.html
 #: contrib/simple_history/templates/simple_history/object_history_list.html
 msgid "Field"
-msgstr ""
+msgstr "فیلد"
 
 #: templates/unfold/helpers/change_list_filter_button.html
 #: templates/unfold/helpers/change_list_filter_button.html
@@ -312,17 +312,17 @@ msgstr "میانبرهای سراسری"
 #: templates/unfold/helpers/header_back_button.html
 #: templates/unfold/helpers/header_back_button.html
 msgid "Go back"
-msgstr ""
+msgstr "بازگشت"
 
 #: contrib/guardian/templates/unfold/guardian/group_form.html
 #: contrib/guardian/templates/unfold/guardian/group_form.html
 msgid "Group"
-msgstr ""
+msgstr "گروه"
 
 #: contrib/guardian/templates/unfold/guardian/group_form.html
 #: contrib/guardian/templates/unfold/guardian/group_form.html
 msgid "Group permissions"
-msgstr ""
+msgstr "دسترسی‌های گروه"
 
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
@@ -330,7 +330,7 @@ msgstr ""
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 msgid "Heading"
-msgstr ""
+msgstr "عنوان"
 
 #: templates/unfold/helpers/change_list_filter_actions.html
 #: templates/unfold/helpers/change_list_filter_actions.html
@@ -340,7 +340,7 @@ msgstr "پنهان کردن شمارش"
 #: contrib/hijack/templates/hijack/notification.html
 #: contrib/hijack/templates/hijack/notification.html
 msgid "hide warning"
-msgstr ""
+msgstr "پنهان کردن هشدار"
 
 #: templates/unfold/helpers/site_icon.html
 #: templates/unfold/helpers/site_icon.html
@@ -360,23 +360,25 @@ msgstr "پیش‌نمایش تصویر"
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 msgid "Indent decrease"
-msgstr ""
+msgstr "کاهش تورفتگی"
 
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 msgid "Indent increase"
-msgstr ""
+msgstr "افزایش تورفتگی"
 
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 msgid "Italic"
-msgstr ""
+msgstr "کج"
 
 #: mixins/dataset_model_admin.py
 msgid ""
 "Items must be selected in order to perform actions on them. No items have "
 "been changed."
 msgstr ""
+"برای انجام عملیات روی موارد، باید آن‌ها را انتخاب کنید. هیچ موردی تغییر "
+"نکرده است."
 
 #: templates/unfold/helpers/theme_switch.html
 #: templates/unfold/helpers/theme_switch_dropdown.html
@@ -388,14 +390,14 @@ msgstr "روشن"
 #: contrib/import_export/templates/admin/import_export/import_errors.html
 #: contrib/import_export/templates/admin/import_export/import_errors.html
 msgid "Line number"
-msgstr ""
+msgstr "شماره خط"
 
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 msgid "Link"
-msgstr ""
+msgstr "پیوند"
 
 #: templates/admin/login.html templates/admin/login.html
 msgid "Log in"
@@ -404,7 +406,7 @@ msgstr "ورود"
 #: templates/registration/logged_out.html
 #: templates/registration/logged_out.html
 msgid "Log in again"
-msgstr ""
+msgstr "مجدداً وارد شوید"
 
 #: templates/unfold/helpers/account_links.html
 #: templates/unfold/helpers/account_links.html
@@ -414,12 +416,12 @@ msgstr "خروج"
 #: contrib/guardian/templates/unfold/guardian/group_form.html
 #: contrib/guardian/templates/unfold/guardian/group_form.html
 msgid "Manage group"
-msgstr ""
+msgstr "مدیریت گروه"
 
 #: contrib/guardian/templates/unfold/guardian/user_form.html
 #: contrib/guardian/templates/unfold/guardian/user_form.html
 msgid "Manage user"
-msgstr ""
+msgstr "مدیریت کاربر"
 
 #: contrib/constance/templates/admin/constance/includes/results_list.html
 #: contrib/constance/templates/admin/constance/includes/results_list.html
@@ -431,12 +433,12 @@ msgstr "نام"
 #: templates/unfold/helpers/command_help.html
 #: templates/unfold/helpers/shortcuts.html
 msgid "Navigate"
-msgstr ""
+msgstr "ناوبری"
 
 #: contrib/simple_history/templates/simple_history/object_history_list.html
 #: contrib/simple_history/templates/simple_history/object_history_list.html
 msgid "New value"
-msgstr ""
+msgstr "مقدار جدید"
 
 #: templates/unfold/helpers/pagination_infinite.html
 #: templates/unfold/helpers/pagination_infinite.html
@@ -468,29 +470,29 @@ msgstr "خیر، بازگردم"
 #: contrib/import_export/templates/admin/import_export/import_validation.html
 #: contrib/import_export/templates/admin/import_export/import_validation.html
 msgid "Non field specific"
-msgstr ""
+msgstr "غیر مرتبط با فیلد"
 
 #: contrib/filters/templates/unfold/filters/filters_numeric_slider.html
 #: contrib/filters/templates/unfold/filters/filters_numeric_slider.html
 msgid "Not enough data."
-msgstr ""
+msgstr "داده کافی نیست."
 
 #: contrib/simple_history/templates/simple_history/object_history_list.html
 #: contrib/simple_history/templates/simple_history/object_history_list.html
 msgid "Object"
-msgstr ""
+msgstr "شیء"
 
 #: templates/admin/delete_confirmation.html
 #: templates/admin/delete_selected_confirmation.html
 #: templates/admin/delete_confirmation.html
 #: templates/admin/delete_selected_confirmation.html
 msgid "Objects"
-msgstr ""
+msgstr "اشیاء"
 
 #: contrib/simple_history/templates/simple_history/object_history_list.html
 #: contrib/simple_history/templates/simple_history/object_history_list.html
 msgid "Old value"
-msgstr ""
+msgstr "مقدار قدیمی"
 
 #: templates/unfold/helpers/shortcuts.html
 #: templates/unfold/helpers/shortcuts.html
@@ -500,27 +502,27 @@ msgstr "باز کردن ابزار فرمان"
 #: templates/unfold/helpers/shortcuts.html
 #: templates/unfold/helpers/shortcuts.html
 msgid "Open selection"
-msgstr ""
+msgstr "باز کردن انتخاب"
 
 #: templates/unfold/helpers/shortcuts.html
 #: templates/unfold/helpers/shortcuts.html
 msgid "Open selection in new tab"
-msgstr ""
+msgstr "باز کردن انتخاب در تب جدید"
 
 #: templates/unfold/helpers/shortcuts.html
 #: templates/unfold/helpers/shortcuts.html
 msgid "Open shortcuts list"
-msgstr ""
+msgstr "باز کردن فهرست میانبرها"
 
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 msgid "Ordered list"
-msgstr ""
+msgstr "فهرست مرتب"
 
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 msgid "Paragraph"
-msgstr ""
+msgstr "پاراگراف"
 
 #: contrib/import_export/templates/admin/import_export/import_validation.html
 #: contrib/import_export/templates/admin/import_export/import_validation.html
@@ -528,17 +530,19 @@ msgid ""
 "Please correct these errors in your data where possible, then reupload it "
 "using the form above."
 msgstr ""
+"لطفاً این خطاها را در داده‌های خود تا حد امکان اصلاح کنید، سپس آن را با "
+"استفاده از فرم بالا مجدداً بارگذاری کنید."
 
 #: contrib/simple_history/templates/simple_history/object_history_form.html
 #: contrib/simple_history/templates/simple_history/object_history_form.html
 msgid "Press the 'Change History' button below to edit the history."
-msgstr ""
+msgstr "برای ویرایش تاریخچه، دکمه «تاریخچه تغییرات» زیر را فشار دهید."
 
 #: contrib/simple_history/templates/simple_history/object_history_form.html
 #: contrib/simple_history/templates/simple_history/object_history_form.html
 msgid ""
 "Press the 'Revert' button below to revert to this version of the object."
-msgstr ""
+msgstr "برای بازگشت به این نسخه از شیء، دکمه «بازگردانی» زیر را فشار دهید."
 
 #: templates/unfold/helpers/pagination_infinite.html
 #: templates/unfold/helpers/pagination_infinite.html
@@ -548,7 +552,7 @@ msgstr "قبلی"
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 msgid "Quote"
-msgstr ""
+msgstr "نقل قول"
 
 #: templates/unfold/helpers/history.html templates/unfold/helpers/history.html
 msgid "Recent actions"
@@ -562,12 +566,12 @@ msgstr "جستجوهای اخیر"
 #: templates/unfold/helpers/display_header.html
 #: templates/unfold/helpers/display_header.html
 msgid "Record picture"
-msgstr ""
+msgstr "تصویر رکورد"
 
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 msgid "Redo"
-msgstr ""
+msgstr "از نو"
 
 #: templates/unfold/helpers/change_list_headers.html
 #: templates/unfold/helpers/change_list_headers.html
@@ -587,17 +591,17 @@ msgstr "بازنشانی به پیش‌فرض"
 #: templates/unfold/helpers/unauthenticated_header.html
 #: templates/unfold/helpers/unauthenticated_header.html
 msgid "Return to site"
-msgstr ""
+msgstr "بازگشت به سایت"
 
 #: contrib/simple_history/templates/simple_history/submit_line.html
 #: contrib/simple_history/templates/simple_history/submit_line.html
 msgid "Revert"
-msgstr ""
+msgstr "بازگردانی"
 
 #: contrib/import_export/templates/admin/import_export/import_validation.html
 #: contrib/import_export/templates/admin/import_export/import_validation.html
 msgid "Row"
-msgstr ""
+msgstr "ردیف"
 
 #: templates/admin/actions.html templates/admin/dataset_actions.html
 #: templates/admin/actions.html templates/admin/dataset_actions.html
@@ -629,7 +633,7 @@ msgstr "ذخیره و مشاهده"
 
 #: templates/admin/submit_line.html templates/admin/submit_line.html
 msgid "Save as new"
-msgstr ""
+msgstr "ذخیره به عنوان جدید"
 
 #: templates/unfold/helpers/search.html templates/unfold/helpers/search.html
 msgid "Search apps and models..."
@@ -650,7 +654,7 @@ msgstr "انتخاب عمل برای اجرا"
 
 #: templatetags/unfold_list.py templatetags/unfold_list.py
 msgid "Select all objects on this page for an action"
-msgstr ""
+msgstr "انتخاب همه اشیاء در این صفحه برای یک عملیات"
 
 #: widgets.py
 msgid "Select currency"
@@ -681,17 +685,17 @@ msgstr "نمایش شمارش"
 #: contrib/import_export/templates/admin/import_export/import_validation.html
 #: contrib/import_export/templates/admin/import_export/import_validation.html
 msgid "Some rows failed to validate"
-msgstr ""
+msgstr "برخی ردیف‌ها تأیید نشدند"
 
 #: contrib/hijack/templates/hijack/notification.html
 #: contrib/hijack/templates/hijack/notification.html
 msgid "stop impersonating"
-msgstr ""
+msgstr "توقف جعل هویت"
 
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 msgid "Strike"
-msgstr ""
+msgstr "خط‌خورده"
 
 #: contrib/import_export/templates/admin/import_export/export.html
 #: contrib/import_export/templates/admin/import_export/import_form.html
@@ -703,7 +707,7 @@ msgstr "ثبت"
 #: templates/admin/includes/object_delete_summary.html
 #: templates/admin/includes/object_delete_summary.html
 msgid "Summary"
-msgstr ""
+msgstr "خلاصه"
 
 #: templates/unfold/helpers/theme_switch.html
 #: templates/unfold/helpers/theme_switch_dropdown.html
@@ -715,27 +719,27 @@ msgstr "سیستم"
 #: templates/registration/logged_out.html
 #: templates/registration/logged_out.html
 msgid "Thanks for spending some quality time with the web site today."
-msgstr ""
+msgstr "از اینکه امروز زمان باکیفیتی را در وب‌سایت سپری کردید، سپاسگزاریم."
 
 #: contrib/import_export/templates/admin/import_export/export.html
 #: contrib/import_export/templates/admin/import_export/export.html
 msgid "This exporter will export the following fields"
-msgstr ""
+msgstr "این صادرکننده فیلدهای زیر را صادر خواهد کرد"
 
 #: contrib/import_export/templates/admin/import_export/resource_fields_list.html
 #: contrib/import_export/templates/admin/import_export/resource_fields_list.html
 msgid "This exporter will export the following fields:"
-msgstr ""
+msgstr "این صادرکننده فیلدهای زیر را صادر خواهد کرد:"
 
 #: contrib/import_export/templates/admin/import_export/resource_fields_list.html
 #: contrib/import_export/templates/admin/import_export/resource_fields_list.html
 msgid "This importer will import the following fields:"
-msgstr ""
+msgstr "این واردکننده فیلدهای زیر را وارد خواهد کرد:"
 
 #: templates/unfold/helpers/edit_inline/inline_delete_undo.html
 #: templates/unfold/helpers/edit_inline/inline_delete_undo.html
 msgid "This item will be deleted."
-msgstr ""
+msgstr "این مورد حذف خواهد شد."
 
 #: templates/unfold/helpers/empty_results.html
 #: templates/unfold/helpers/empty_results.html
@@ -763,7 +767,7 @@ msgstr "تغییر حالت تاریک/روشن"
 #: templates/unfold/helpers/shortcuts.html
 #: templates/unfold/helpers/shortcuts.html
 msgid "Toggle filter"
-msgstr ""
+msgstr "نمایش/پنهان فیلتر"
 
 #: templates/unfold/widgets/password_toggle.html
 #: templates/unfold/widgets/password_toggle.html
@@ -792,12 +796,12 @@ msgstr "برای جستجو تایپ کنید"
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 msgid "Underlined"
-msgstr ""
+msgstr "زیرخط‌دار"
 
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 msgid "Undo"
-msgstr ""
+msgstr "بازگردانی"
 
 #: templates/unfold/helpers/boolean.html templates/unfold/helpers/boolean.html
 msgid "Unknown"
@@ -805,29 +809,29 @@ msgstr "ناشناخته"
 
 #: templates/unfold/helpers/history.html templates/unfold/helpers/history.html
 msgid "Unknown content"
-msgstr ""
+msgstr "محتوای ناشناخته"
 
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 msgid "Unlink"
-msgstr ""
+msgstr "حذف پیوند"
 
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 #: contrib/forms/templates/unfold/forms/helpers/toolbar.html
 msgid "Unordered list"
-msgstr ""
+msgstr "فهرست نامرتب"
 
 #: contrib/guardian/templates/unfold/guardian/user_form.html
 #: templates/admin/object_history.html
 #: contrib/guardian/templates/unfold/guardian/user_form.html
 #: templates/admin/object_history.html
 msgid "User"
-msgstr ""
+msgstr "کاربر"
 
 #: contrib/guardian/templates/unfold/guardian/user_form.html
 #: contrib/guardian/templates/unfold/guardian/user_form.html
 msgid "User permissions"
-msgstr ""
+msgstr "دسترسی‌های کاربر"
 
 #: contrib/constance/templates/admin/constance/includes/results_list.html
 #: contrib/filters/forms.py
@@ -851,7 +855,7 @@ msgstr "مشاهده سایت"
 #: contrib/import_export/templates/admin/import_export/import_errors.html
 #: contrib/import_export/templates/admin/import_export/import_errors.html
 msgid "View traceback"
-msgstr ""
+msgstr "مشاهده ردگیری خطا"
 
 #: templatetags/unfold.py templatetags/unfold.py
 msgid "Welcome"
@@ -867,7 +871,7 @@ msgstr "بله"
 #: templates/unfold/helpers/delete_submit_line.html
 #: templates/unfold/helpers/delete_submit_line.html
 msgid "Yes, I’m sure"
-msgstr ""
+msgstr "بله، مطمئنم"
 
 #: mixins/nested_inlines_model_admin.py
 msgid "You can not create nested object without parent"
@@ -876,4 +880,4 @@ msgstr "بدون والد نمی‌توانید شیء تودرتو ایجاد �
 #: templates/registration/logged_out.html
 #: templates/registration/logged_out.html
 msgid "You have been successfully logged out from the administration"
-msgstr ""
+msgstr "شما با موفقیت از پنل مدیریت خارج شدید"

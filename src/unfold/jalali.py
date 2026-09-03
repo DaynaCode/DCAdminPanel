@@ -253,6 +253,9 @@ def parse_jalali_date(s: str) -> date:
     Accepts both Latin and Persian digits. Assumes the format is YYYY/MM/DD
     separated by '/' or '-'.
     """
+    if not s or not isinstance(s, str):
+        raise ValueError(f"Invalid Jalali date format: {s!r} (expected YYYY/MM/DD)")
+
     persian_to_latin = str.maketrans("۰۱۲۳۴۵۶۷۸۹", "0123456789")
     s = s.translate(persian_to_latin)
 
@@ -262,7 +265,14 @@ def parse_jalali_date(s: str) -> date:
     if len(parts) != 3:
         raise ValueError(f"Invalid Jalali date format: {s!r} (expected YYYY/MM/DD)")
 
-    jy, jm, jd = int(parts[0]), int(parts[1]), int(parts[2])
+    try:
+        jy, jm, jd = int(parts[0]), int(parts[1]), int(parts[2])
+    except ValueError:
+        raise ValueError(f"Invalid Jalali date format: {s!r} (expected YYYY/MM/DD)")
+
+    if not (1 <= jm <= 12 and 1 <= jd <= 31 and jy > 0):
+        raise ValueError(f"Invalid Jalali date values: year={jy}, month={jm}, day={jd}")
+
     gy, gm, gd = jalali_to_gregorian(jy, jm, jd)
     return date(gy, gm, gd)
 

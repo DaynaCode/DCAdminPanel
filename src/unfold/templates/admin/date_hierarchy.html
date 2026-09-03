@@ -1,3 +1,4 @@
+{% load jalali %}
 {% if show %}
     <div class="mb-4">
         <ul class="toplinks flex flex-wrap -mx-2">
@@ -6,7 +7,12 @@
                     {% if back %}
                         <li class="date-back px-2">
                             <a href="{{ back.link }}" class="flex group items-center hover:text-primary-600 dark:hover:text-primary-500">
-                                <span class="material-symbols-outlined md-16 mr-2 text-base-400 group-hover:text-primary-600 dark:group-hover:text-primary-500">arrow_back</span> {{ back.title }}
+                                <span class="material-symbols-outlined md-16 me-2 text-base-400 group-hover:text-primary-600 dark:group-hover:text-primary-500">{% if LANGUAGE_BIDI %}arrow_forward{% else %}arrow_back{% endif %}</span>
+                                {% if LANGUAGE_BIDI and back.title %}
+                                    {{ back.title|jalali_date_latin }}
+                                {% else %}
+                                    {{ back.title }}
+                                {% endif %}
                             </a>
                         </li>
                     {% endif %}
@@ -19,7 +25,11 @@
                                 <a href="{{ choice.link }}" class="hover:text-primary-600 dark:hover:text-primary-500">
                             {% endif %}
 
-                            {{ choice.title }}
+                            {% if LANGUAGE_BIDI and choice.title %}
+                                {{ choice.title|jalali_date_latin }}
+                            {% else %}
+                                {{ choice.title }}
+                            {% endif %}
 
                             {% if choice.link %}
                                 </a>
