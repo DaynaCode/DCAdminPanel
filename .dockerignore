@@ -1,0 +1,96 @@
+# =============================================================================
+# .dockerignore — files to exclude from Docker build context
+# =============================================================================
+# This reduces the build context size and speeds up builds.
+
+# Version control
+.git
+.gitignore
+.github
+.gitattributes
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info
+.eggs
+build/
+dist/
+develop-eggs/
+downloads/
+parts/
+sdist/
+wheels/
+*.egg
+.installed.cfg
+MANIFEST
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Testing & coverage
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+coverage.xml
+*.cover
+
+# Database
+*.sqlite3
+*.db
+db.sqlite3
+
+# Logs
+logs/
+*.log
+*.pid
+
+# Static & media (will be generated inside the container)
+staticfiles/
+mediafiles/
+
+# Docker
+Dockerfile
+docker-compose.yml
+docker-compose.*.yml
+.dockerignore
+
+# Documentation (not needed at runtime)
+docs/
+*.md
+LICENSE*
+THIRD-PARTY-NOTICES*
+CHANGELOG*
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project-specific
+node_modules/
+*.mo
+*.pot
