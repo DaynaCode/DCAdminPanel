@@ -804,3 +804,101 @@ class TestJalaliTemplateIntegration:
             response = admin_client.get(url)
             # Should not error
             assert response.status_code in (200, 302, 404)
+
+
+# ---------------------------------------------------------------------------
+# Enhanced Jalali calendar v2 tests
+# ---------------------------------------------------------------------------
+
+class TestJalaliJSEnhanced:
+    """Verify the enhanced Jalali calendar widget has all new features."""
+
+    JS_PATH = Path(__file__).resolve().parent.parent / "src" / "unfold" / "static" / "unfold" / "js" / "jalali.js"
+
+    def test_js_has_today_button(self):
+        content = self.JS_PATH.read_text(encoding="utf-8")
+        assert "unfold-jalali-today-btn" in content, "Calendar must have a Today button"
+        assert "data-action=\"today\"" in content, "Today button must have data-action=today"
+
+    def test_js_has_clear_button(self):
+        content = self.JS_PATH.read_text(encoding="utf-8")
+        assert "unfold-jalali-clear-btn" in content, "Calendar must have a Clear button"
+        assert "data-action=\"clear\"" in content, "Clear button must have data-action=clear"
+
+    def test_js_has_year_dropdown(self):
+        content = self.JS_PATH.read_text(encoding="utf-8")
+        assert "unfold-jalali-year-select" in content, "Calendar must have a year dropdown"
+        assert "<select" in content, "Calendar must use <select> for year/month navigation"
+
+    def test_js_has_month_dropdown(self):
+        content = self.JS_PATH.read_text(encoding="utf-8")
+        assert "unfold-jalali-month-select" in content, "Calendar must have a month dropdown"
+
+    def test_js_has_year_navigation(self):
+        content = self.JS_PATH.read_text(encoding="utf-8")
+        assert "prev-year" in content, "Calendar must have prev-year navigation"
+        assert "next-year" in content, "Calendar must have next-year navigation"
+
+    def test_js_has_month_navigation(self):
+        content = self.JS_PATH.read_text(encoding="utf-8")
+        assert "prev-month" in content, "Calendar must have prev-month navigation"
+        assert "next-month" in content, "Calendar must have next-month navigation"
+
+    def test_js_has_friday_highlight(self):
+        content = self.JS_PATH.read_text(encoding="utf-8")
+        assert "unfold-jalali-friday" in content, "Calendar must highlight Fridays"
+        assert "unfold-jalali-friday-header" in content, "Calendar must highlight Friday in weekday header"
+
+    def test_js_has_keyboard_navigation(self):
+        content = self.JS_PATH.read_text(encoding="utf-8")
+        assert "ArrowLeft" in content, "Calendar must support ArrowLeft key"
+        assert "ArrowRight" in content, "Calendar must support ArrowRight key"
+        assert "ArrowUp" in content, "Calendar must support ArrowUp key"
+        assert "ArrowDown" in content, "Calendar must support ArrowDown key"
+        assert "Escape" in content, "Calendar must support Escape key to close"
+        assert "Enter" in content, "Calendar must support Enter key to select"
+
+    def test_js_has_gregorian_tooltip(self):
+        content = self.JS_PATH.read_text(encoding="utf-8")
+        assert "formatGregorian" in content, "Calendar must format Gregorian dates for tooltip"
+        assert "title=" in content, "Calendar must add title attribute for tooltip"
+
+    def test_js_has_dark_mode_support(self):
+        content = self.JS_PATH.read_text(encoding="utf-8")
+        assert ".dark .unfold-jalali" in content, "Calendar must have dark mode styles"
+
+    def test_js_has_persian_placeholder(self):
+        content = self.JS_PATH.read_text(encoding="utf-8")
+        assert "placeholder" in content, "Calendar input must have placeholder"
+        assert "۱۴۰۳" in content or "1403" in content, "Placeholder should show Jalali year"
+
+    def test_js_has_htmx_support(self):
+        content = self.JS_PATH.read_text(encoding="utf-8")
+        assert "htmx:afterSwap" in content, "Calendar must re-init after htmx swaps"
+        assert "htmx:afterSettle" in content, "Calendar must re-init after htmx settles"
+
+    def test_js_has_full_weekday_names(self):
+        content = self.JS_PATH.read_text(encoding="utf-8")
+        assert "WEEKDAYS_FULL" in content, "Calendar must have full weekday names"
+        assert "شنبه" in content, "Calendar must include Persian weekday names"
+        assert "جمعه" in content
+
+    def test_js_has_responsive_design(self):
+        content = self.JS_PATH.read_text(encoding="utf-8")
+        assert "@media" in content, "Calendar must have responsive styles"
+        assert "max-width: 480px" in content, "Calendar must adapt to small screens"
+
+    def test_js_has_to_latin_digits(self):
+        content = self.JS_PATH.read_text(encoding="utf-8")
+        assert "toLatinDigits" in content, "Calendar must have toLatinDigits helper"
+
+    def test_js_has_close_popup_api(self):
+        content = self.JS_PATH.read_text(encoding="utf-8")
+        assert "closePopup" in content, "Calendar must expose closePopup in public API"
+        assert "window.UnfoldJalali" in content
+        assert "closePopup: closePopup" in content
+
+    def test_js_popup_width_is_340(self):
+        """The popup should be 340px wide (large enough for all features)."""
+        content = self.JS_PATH.read_text(encoding="utf-8")
+        assert "width: 340px" in content, "Calendar popup should be 340px wide"

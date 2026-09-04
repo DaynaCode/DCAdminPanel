@@ -3,11 +3,11 @@
     {% if LANGUAGE_BIDI %}
         <input type="text"
                name="{{ widget.name }}"
-               {% if widget.value != None %}value="{{ widget.value|stringformat:'s' }}"{% endif %}
+               {% if widget.value != None %}value="{{ widget.value }}"{% endif %}
                data-jalali-datepicker
-               data-gregorian="{% if widget.value != None %}{{ widget.value }}{% endif %}"
+               {% if widget.value != None %}data-gregorian="{{ widget.value }}"{% endif %}
                autocomplete="off"
-               class="{{ widget.attrs.class|default:'' }}"
+               class="unfold-jalali-input {{ widget.attrs.class|default:'' }}"
                id="{{ widget.attrs.id|default:'' }}">
     {% else %}
         {% include "django/forms/widgets/input.html" %}
